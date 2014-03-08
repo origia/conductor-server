@@ -1,6 +1,7 @@
 require 'bundler/setup'
 require 'json'
 require 'pp'
+require 'date'
 
 module Conductor
   def self.root
@@ -9,6 +10,10 @@ module Conductor
 
   def self.env
     Sinatra::Base.environment
+  end
+
+  def self.img
+    '/img'
   end
 end
 

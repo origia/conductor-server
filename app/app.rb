@@ -9,8 +9,18 @@ class ConductorApp < Sinatra::Base
   end
 
 
-  get '/' do
-    pp Search.all
+  get '/history' do
+    from = @params[:start] if @params[:start].present?
+    to   = @params[:end] if @params[:end].present?
+    where_cond = { "$lte" => from, "$gte" => to }
+    where_cond.delete_if { |_,v| v.nil? }
+    records = Search.where(created_at: where_cond).asc(:created_at)
+    records = Search.all if records.blank?
+    records = records.map do |record|
+      record[:img] = "http://#{@env['HTTP_HOST']}#{Conductor.img}/#{record[:img]}"
+      record
+    end
+    records.to_json
   end
 
   post '/save' do
@@ -23,6 +33,8 @@ class ConductorApp < Sinatra::Base
     search.object = @params[:object]
     search.img    = img_path
     search.save
+
+    {object: search.object}.to_json
   end
 
   def save_img(img)
@@ -36,11 +48,10 @@ class ConductorApp < Sinatra::Base
         ext = ".png"
     end
     filename = "#{SecureRandom.urlsafe_base64}#{ext}"
-    f = File.open("/img/#{filename}",'w')
+    f = File.open("#{Conductor.root}/app/public/img/#{filename}",'w')
     f.puts img[1].unpack('m')[0]
     f.close
     filename
   end
-
 
 end

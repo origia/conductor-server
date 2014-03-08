@@ -10,4 +10,8 @@ class Search
     self.created_at.strftime '%m/%d %H:%M'
   end
 
+  def find_record
+
+  end
+
 end
