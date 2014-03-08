@@ -1,0 +1,6 @@
+development:
+  sessions:
+    default:
+      database: conductor
+      hosts:
+        - localhost:27017

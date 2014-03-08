@@ -1,0 +1,3 @@
+development:
+  apn:
+    pem_file: '<%= Conductor.root %>/config/push_cert.pem'

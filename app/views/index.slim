@@ -1,0 +1,16 @@
+h1 = "SmartWalk"
+
+table.table.table-striped
+  thead
+    tr
+      th = "時間"
+      th = "位置"
+      th = "方向"
+  tbody
+  - for bump in @bumps
+    tr
+      td = bump.created_at_s
+      td = bump.location_s
+      td = bump.position_s
+
+script src="/js/reload.js"
