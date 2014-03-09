@@ -29,7 +29,7 @@ class Wish
 
       Parallel.each(search_obj, in_threads: 3) {|key, obj|
         results = obj.search
-        w = self.where(word: obj.word).first
+        w = self.where(word: obj.word).desc(:created_at).first
         w[key] = results
         w.save
       }

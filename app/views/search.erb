@@ -1,0 +1,25 @@
+<div class="search">
+  <% @records.each do |record| %>
+      <ul class="item">
+        <% item.each do |key, value|%>
+            <li class="<%= key %>">
+              <div class="thumbnail-area">
+                <a href="<%= value['url'] %>" target="item">
+                  <img class="item-thumbnail" src="<%= value['img'] %>">
+                </a>
+              </div>
+              <div class="detail-area">
+                <div class="detail-head">
+                  <span class="title"><%= value['title'] %></span>
+                  <span class="price"><%= value['price'] %></span>
+                </div>
+                <div class="detail-footer">
+                  <span class="program"><%= record['title'] %></span>
+                  <span class="craeted-date"><%= record['created_at'].localtime %></span>
+                </div>
+              </div>
+            </li>
+        <% end %>
+      </ul>
+  <% end %>
+</div>
