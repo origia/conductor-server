@@ -1,4 +1,5 @@
 <div class="search">
+  <h2>Browsing history on Counductor</h2>
   <ul class="item-frame">
     <% @records.each do |record| %>
       <li class="item">
@@ -6,9 +7,9 @@
           <img src="<%= record['img'] %>">
         </div>
         <div class="detail-frame">
-            <span class="word"><%= record['word'] %></span>
-            <span class="title"><%= record['title']%></span>
-            <span class="craeted-date"><%= record['created_at'].localtime %></span>
+            <span class="word"><%= record['word'] %></span><br>
+            <span class="title">「<%= record['title']%>」より</span>
+            <span class="created-date"><%= record['created_at'].localtime.strftime("%Y/%m/%d %H:%M:%S") %></span>
         </div>
       </li>
     <% end %>

@@ -50,7 +50,7 @@ header {
 		}
 	}
 }
-.wish {
+.wish, .search {
 	margin: 0 auto;
 	padding-bottom: 50px;
 	width: 1080px;
@@ -62,7 +62,7 @@ header {
 		color: #444;
 		letter-spacing: 1px;
 	}
-	ul.item {
+	ul.item, ul.item-frame {
 		li {
 			margin:10px auto;
 			padding: 10px;
@@ -70,7 +70,7 @@ header {
 			background: white;
 			box-shadow: 0 0 2px #444;
 			overflow: hidden;
-			.thumbnail-area {
+			.thumbnail-area, .image-frame {
 				margin-left: 15px;
 				float: left;
 				width: 150px;
@@ -82,7 +82,7 @@ header {
 					}
 				}
 			}
-			.detail-area {
+			.detail-area, .detail-frame {
 				float: left;
 				margin-top: 15px;
 				margin-left: 25px;
@@ -111,6 +111,22 @@ header {
 						color: #888;
 						letter-spacing: 2px;
 					}
+				}
+				.word {
+					font-size: 27px;
+					color: #444;
+					clear: both;
+				}
+				.title {
+					clear: both;
+					font-size: 21px;
+					color: #666;
+				}
+				.created-date {
+					padding-left: 15px;
+					font-size: 17px;
+					color: #888;
+					letter-spacing: 2px;
 				}
 			}
 		}

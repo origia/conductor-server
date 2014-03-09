@@ -43,52 +43,65 @@ header {
     header .logo:hover {
       opacity: 0.8; }
 
-.wish {
+.wish, .search {
   margin: 0 auto;
   padding-bottom: 50px;
   width: 1080px; }
-  .wish h2 {
+  .wish h2, .search h2 {
     margin: 20px auto;
     font-size: 50px;
     font-weight: normal;
     text-align: center;
     color: #444;
     letter-spacing: 1px; }
-  .wish ul.item li {
+  .wish ul.item li, .wish ul.item-frame li, .search ul.item li, .search ul.item-frame li {
     margin: 10px auto;
     padding: 10px;
     width: 100%;
     background: white;
     box-shadow: 0 0 2px #444;
     overflow: hidden; }
-    .wish ul.item li .thumbnail-area {
+    .wish ul.item li .thumbnail-area, .wish ul.item li .image-frame, .wish ul.item-frame li .thumbnail-area, .wish ul.item-frame li .image-frame, .search ul.item li .thumbnail-area, .search ul.item li .image-frame, .search ul.item-frame li .thumbnail-area, .search ul.item-frame li .image-frame {
       margin-left: 15px;
       float: left;
       width: 150px;
       height: 150px;
       overflow: hidden; }
-      .wish ul.item li .thumbnail-area a img {
+      .wish ul.item li .thumbnail-area a img, .wish ul.item li .image-frame a img, .wish ul.item-frame li .thumbnail-area a img, .wish ul.item-frame li .image-frame a img, .search ul.item li .thumbnail-area a img, .search ul.item li .image-frame a img, .search ul.item-frame li .thumbnail-area a img, .search ul.item-frame li .image-frame a img {
         width: 160px; }
-    .wish ul.item li .detail-area {
+    .wish ul.item li .detail-area, .wish ul.item li .detail-frame, .wish ul.item-frame li .detail-area, .wish ul.item-frame li .detail-frame, .search ul.item li .detail-area, .search ul.item li .detail-frame, .search ul.item-frame li .detail-area, .search ul.item-frame li .detail-frame {
       float: left;
       margin-top: 15px;
       margin-left: 25px;
       width: 880px; }
-      .wish ul.item li .detail-area .detail-head .title {
+      .wish ul.item li .detail-area .detail-head .title, .wish ul.item li .detail-frame .detail-head .title, .wish ul.item-frame li .detail-area .detail-head .title, .wish ul.item-frame li .detail-frame .detail-head .title, .search ul.item li .detail-area .detail-head .title, .search ul.item li .detail-frame .detail-head .title, .search ul.item-frame li .detail-area .detail-head .title, .search ul.item-frame li .detail-frame .detail-head .title {
         font-size: 27px;
         color: #444; }
-      .wish ul.item li .detail-area .detail-head .price {
+      .wish ul.item li .detail-area .detail-head .price, .wish ul.item li .detail-frame .detail-head .price, .wish ul.item-frame li .detail-area .detail-head .price, .wish ul.item-frame li .detail-frame .detail-head .price, .search ul.item li .detail-area .detail-head .price, .search ul.item li .detail-frame .detail-head .price, .search ul.item-frame li .detail-area .detail-head .price, .search ul.item-frame li .detail-frame .detail-head .price {
         margin-left: 40px;
         font-size: 25px;
         color: #FF7373; }
-      .wish ul.item li .detail-area .detail-footer {
+      .wish ul.item li .detail-area .detail-footer, .wish ul.item li .detail-frame .detail-footer, .wish ul.item-frame li .detail-area .detail-footer, .wish ul.item-frame li .detail-frame .detail-footer, .search ul.item li .detail-area .detail-footer, .search ul.item li .detail-frame .detail-footer, .search ul.item-frame li .detail-area .detail-footer, .search ul.item-frame li .detail-frame .detail-footer {
         padding-top: 25px;
         text-align: right; }
-        .wish ul.item li .detail-area .detail-footer .program {
+        .wish ul.item li .detail-area .detail-footer .program, .wish ul.item li .detail-frame .detail-footer .program, .wish ul.item-frame li .detail-area .detail-footer .program, .wish ul.item-frame li .detail-frame .detail-footer .program, .search ul.item li .detail-area .detail-footer .program, .search ul.item li .detail-frame .detail-footer .program, .search ul.item-frame li .detail-area .detail-footer .program, .search ul.item-frame li .detail-frame .detail-footer .program {
           font-size: 21px;
           color: #666; }
-        .wish ul.item li .detail-area .detail-footer .created-date {
+        .wish ul.item li .detail-area .detail-footer .created-date, .wish ul.item li .detail-frame .detail-footer .created-date, .wish ul.item-frame li .detail-area .detail-footer .created-date, .wish ul.item-frame li .detail-frame .detail-footer .created-date, .search ul.item li .detail-area .detail-footer .created-date, .search ul.item li .detail-frame .detail-footer .created-date, .search ul.item-frame li .detail-area .detail-footer .created-date, .search ul.item-frame li .detail-frame .detail-footer .created-date {
           padding-left: 15px;
           font-size: 17px;
           color: #888;
           letter-spacing: 2px; }
+      .wish ul.item li .detail-area .word, .wish ul.item li .detail-frame .word, .wish ul.item-frame li .detail-area .word, .wish ul.item-frame li .detail-frame .word, .search ul.item li .detail-area .word, .search ul.item li .detail-frame .word, .search ul.item-frame li .detail-area .word, .search ul.item-frame li .detail-frame .word {
+        font-size: 27px;
+        color: #444;
+        clear: both; }
+      .wish ul.item li .detail-area .title, .wish ul.item li .detail-frame .title, .wish ul.item-frame li .detail-area .title, .wish ul.item-frame li .detail-frame .title, .search ul.item li .detail-area .title, .search ul.item li .detail-frame .title, .search ul.item-frame li .detail-area .title, .search ul.item-frame li .detail-frame .title {
+        clear: both;
+        font-size: 21px;
+        color: #666; }
+      .wish ul.item li .detail-area .created-date, .wish ul.item li .detail-frame .created-date, .wish ul.item-frame li .detail-area .created-date, .wish ul.item-frame li .detail-frame .created-date, .search ul.item li .detail-area .created-date, .search ul.item li .detail-frame .created-date, .search ul.item-frame li .detail-area .created-date, .search ul.item-frame li .detail-frame .created-date {
+        padding-left: 15px;
+        font-size: 17px;
+        color: #888;
+        letter-spacing: 2px; }
