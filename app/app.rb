@@ -55,7 +55,7 @@ class ConductorApp < Sinatra::Base
     #records = Search.all if records.blank?
     records = Search.all
     records = records.map do |record|
-      record[:img] = "http://#{@env['HTTP_HOST']}#{Conductor.img}/#{record[:img]}"
+      record[:img] = "#{Conductor.img}/#{record[:img]}"
       record
     end
     records.to_json

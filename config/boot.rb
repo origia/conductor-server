@@ -17,7 +17,7 @@ module Conductor
   end
 
   def self.img
-    '/img'
+    'img'
   end
 end
 
