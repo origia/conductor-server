@@ -1,0 +1,94 @@
+/*-- clear--*/
+html, body, div, p, ul, li, img, header, footer, nav, section, article, aside, figure,
+li li, li p, li pre, li dt, li dd, dd li, dd p, dd pre, dd dt, dd dd,
+h1, h2, h3, h4, h5, h6,
+input, button, textarea {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  box-shadow: none; }
+
+a {
+  text-decoration: none; }
+
+/*-- common --*/
+@font-face {
+  font-family: 'KozGoPr6N-ExtraLight';
+  src: local("KozGoPr6N-ExtraLight.otf");
+  src: url("fonts/KozGoPr6N-ExtraLight.otf"); }
+
+body {
+  background: #AAA;
+  border-top: 6px solid #666666;
+  background: #EEE;
+  min-width: 1080px;
+  font-family: 'KozGoPr6N-ExtraLight'; }
+
+.inner {
+  width: 1080px;
+  margin: 0 auto; }
+
+/*-- header --*/
+header {
+  width: 100%;
+  height: 80px;
+  background: white;
+  border-bottom: 3px solid #DDDDDD; }
+  header .logo {
+    float: left;
+    margin-top: 17px;
+    margin-left: 15px; }
+    header .logo:hover {
+      opacity: 0.8; }
+
+.wish {
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 1080px; }
+  .wish h2 {
+    margin: 20px auto;
+    font-size: 50px;
+    font-weight: normal;
+    text-align: center;
+    color: #444;
+    letter-spacing: 1px; }
+  .wish ul.item li {
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 0 2px #444;
+    overflow: hidden; }
+    .wish ul.item li .thumbnail-area {
+      margin-left: 15px;
+      float: left;
+      width: 150px;
+      height: 150px;
+      overflow: hidden; }
+      .wish ul.item li .thumbnail-area a img {
+        width: 160px; }
+    .wish ul.item li .detail-area {
+      float: left;
+      margin-top: 15px;
+      margin-left: 25px;
+      width: 880px; }
+      .wish ul.item li .detail-area .detail-head .title {
+        font-size: 27px;
+        color: #444; }
+      .wish ul.item li .detail-area .detail-head .price {
+        margin-left: 40px;
+        font-size: 25px;
+        color: #FF7373; }
+      .wish ul.item li .detail-area .detail-footer {
+        padding-top: 25px;
+        text-align: right; }
+        .wish ul.item li .detail-area .detail-footer .program {
+          font-size: 21px;
+          color: #666; }
+        .wish ul.item li .detail-area .detail-footer .created-date {
+          padding-left: 15px;
+          font-size: 17px;
+          color: #888;
+          letter-spacing: 2px; }

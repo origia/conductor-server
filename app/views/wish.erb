@@ -1,4 +1,5 @@
 <div class="wish">
+  <h2>Your Shopping List on Counductor</h2>
     <% @records.each do |record| %>
     <% item = [];item << ["amazon", record["amazon"]];item << ["rakuten", record["rakuten"]];item << ["yahoo", record["yahoo"]];%>
         <ul class="item">
@@ -12,11 +13,11 @@
                 <div class="detail-area">
                   <div class="detail-head">
                     <span class="title"><%= value['title'] %></span>
-                    <span class="price"><%= value['price'] %></span>
+                    <span class="price">￥<%= value['price'] %></span>
                   </div>
                   <div class="detail-footer">
-                    <span class="program"><%= record['title'] %></span>
-                    <span class="craeted-date"><%= record['created_at'].localtime %></span>
+                    <span class="program">「<%= record['title'] %>」より</span>
+                    <span class="created-date"><%= record['created_at'].localtime.strftime("%Y/%m/%d %H:%M:%S") %></span>
                   </div>
                 </div>
             </li>
