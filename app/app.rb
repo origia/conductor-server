@@ -10,14 +10,14 @@ class ConductorApp < Sinatra::Base
 
 
 
-  get '/wish/' do
-    @records    = Wish.all
+  get '/wish' do
+    @records    = Wish.desc(:created_at)
     @head_title = 'ウィッシュリスト'
     erb :wish
   end
 
-  get '/search/' do
-    @records = Search.all
+  get '/search' do
+    @records = Search.desc(:created_at)
     @records = @records.map do |record|
       record[:img] = "http://#{@env['HTTP_HOST']}#{Conductor.img}/#{record[:img]}"
       record
