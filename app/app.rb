@@ -19,7 +19,7 @@ class ConductorApp < Sinatra::Base
   get '/search' do
     @records = Search.desc(:created_at)
     @records = @records.map do |record|
-      record[:img] = "http://#{@env['HTTP_HOST']}#{Conductor.img}/#{record[:img]}"
+      record[:img] = "#{Conductor.img}/#{record[:img]}"
       record
     end
     @head_title = '検索履歴'
@@ -55,7 +55,7 @@ class ConductorApp < Sinatra::Base
     #records = Search.all if records.blank?
     records = Search.all
     records = records.map do |record|
-      record[:img] = "#{Conductor.img}/#{record[:img]}"
+      record[:img] = "http://210.140.146.101/#{Conductor.img}/#{record[:img]}"
       record
     end
     records.to_json
