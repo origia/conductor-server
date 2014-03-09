@@ -30,6 +30,16 @@ body {
   width: 1080px;
   margin: 0 auto; }
 
+.amazon {
+    border-left: inset 3px #FF9900;
+}
+.yahoo {
+    border-left: inset 3px #FD0034;
+}
+.rakuten {
+    border-left: inset 3px #1E90FF;
+}
+
 /*-- header --*/
 header {
   width: 100%;
