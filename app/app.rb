@@ -11,7 +11,7 @@ class ConductorApp < Sinatra::Base
 
 
   get '/wish' do
-    @records    = Wish.desc(:created_at)
+    @records    = Wish.where(:amazon.ne => "", :amazon.exists => true).desc(:created_at)
     @head_title = 'ウィッシュリスト'
     erb :wish
   end
