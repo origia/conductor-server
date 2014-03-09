@@ -2,6 +2,10 @@ require 'bundler/setup'
 require 'json'
 require 'pp'
 require 'date'
+require 'rakuten_web_service'
+require 'nokogiri'
+require 'uri'
+require 'open-uri'
 
 module Conductor
   def self.root

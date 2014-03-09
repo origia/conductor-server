@@ -5,13 +5,11 @@ class Search
   field :word, type: String
   field :object, type: String
   field :img, type: String
+  field :title, type: String
+  field :currentTime, type: String
 
   def created_at_s
     self.created_at.strftime '%m/%d %H:%M'
-  end
-
-  def find_record
-
   end
 
 end
