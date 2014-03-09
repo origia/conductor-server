@@ -1,5 +1,6 @@
 <div class="search">
   <h2>Browsing history on Counductor</h2>
+  <% if @records.present? %>
   <ul class="item-frame">
     <% @records.each do |record| %>
       <li class="item">
@@ -14,4 +15,7 @@
       </li>
     <% end %>
   </ul>
+  <% else %>
+      <h2>検索履歴が1つもありません</h2>
+  <% end %>
 </div>

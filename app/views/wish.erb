@@ -1,5 +1,6 @@
 <div class="wish">
   <h2>Your Shopping List on Counductor</h2>
+  <% if @records.present? %>
     <% @records.each do |record| %>
     <% item = [];item << ["amazon", record["amazon"]];item << ["rakuten", record["rakuten"]];item << ["yahoo", record["yahoo"]];%>
         <ul class="item">
@@ -24,4 +25,7 @@
             <% end %>
         </ul>
     <% end %>
+   <% else %>
+      <h2>購入したいリストにまだアイテムが1つもありません</h2>
+   <% end %>
 </div>
